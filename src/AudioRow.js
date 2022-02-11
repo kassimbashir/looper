@@ -76,14 +76,17 @@ export default function AudioRow({
   };
 
   return (
-    <div style={{ backgroundColor: color }}>
-      <CoolButton
-        onClick={() => {
-          setMute(!mute);
-        }}
-      >
-        mute
-      </CoolButton>
+    <div class="row" style={{ backgroundColor: color }}>
+      <div class="column">{trackName}</div>
+      <div class="column">
+        <CoolButton
+          onClick={() => {
+            setMute(!mute);
+          }}
+        >
+          mute
+        </CoolButton>
+      </div>
     </div>
   );
 }
