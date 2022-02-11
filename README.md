@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Getting Started with Looper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made possible by team Kassim
 
-## Available Scripts
+## Netlify URL
 
-In the project directory, you can run:
+https://looper-kassim.netlify.app/
 
-### `npm start`
+## Github repo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://github.com/kassimbashir/looper
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## App Overview
 
-### `npm test`
+Looper is multi-track audio player which plays eight audio tracks simultaneously.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## App features
 
-### `npm run build`
+The audio player has 4 kinds of buttons:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Play button
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+start playing all channels simultaneously (which
+isn’t muted)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Stop button
 
-### `npm run eject`
+stop all playing channels and go back to start.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Loop button
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(toggle on/off) - when active, each time the loop ends
+you should immediately go back to start and play again (loop).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Mute button
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Each channel has a mute button (toggle on/off)
 
-## Learn More
+## Technologies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### React
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React is great for Dynamic single-paged Applications. Dividing elements into reusable components makes coding easier and much more efficient.
 
-### Code Splitting
+### Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Free, easy to use and great for front-end applications hosting service
 
-### Analyzing the Bundle Size
+### Styled-components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Styled Components help keep the concerns of styling and element architecture separated and make components more readable.
+Furthermore, Styled Components gives control of states to CSS. For example, I used styled-components to change the color of a selected button.
 
-### Making a Progressive Web App
+## Implementation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The app has two main js files:
 
-### Advanced Configuration
+### App.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+is the main component of the program. It creates the necessary states to control the audio tracks and then renders a list of audios with the appropriate props.
 
-### Deployment
+### AudioRow.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The component for each row in the audio list.
+This component creates an HtmlAudioElement for each track, and it's the component that actually controls everything about the audio: muting, playing, stopping and rewinding
 
-### `npm run build` fails to minify
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Cursor
+
+cursor on top of all channels to show your current playing position in real time.
+
+### Progess Bar
+
+Each audio track has it's own progress bar.
+
+### Synchronization
+
+Measures has been taken to amke sure that all audio tracks finish together to avoid synchronization issues.
+
+### Drag and Drop (Bonus)
+
+Meaning drag and drop abilities to the cursor implemented using HTML slider.
