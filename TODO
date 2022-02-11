@@ -1,0 +1,20 @@
+Bugs:
+-  when player reaches end => then i hit play, it wouldn't play. I need to hit stop first - DONE
+
+-  the cursor does not go back to zero why? it hasn't actually reached the end? - DONE
+
+- fix classname waning - DONE
+
+- each btn needs a separate selected state??? - nope : DONE
+
+- cursor moves funny - because of math.floor? - DONE
+
+TODO:
+
+Make colored buttons - DONE
+
+use unique color for each row - DONE
+
+document code - DONE
+
+deploy to netlify.
